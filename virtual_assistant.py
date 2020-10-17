@@ -7,6 +7,7 @@ import warnings
 import calendar
 import wikipedia
 import random
+import webbrowser
 
 #Ignore any warning msgs
 warnings.filterwarnings('ignore')
@@ -157,6 +158,13 @@ while True:
             else:
                 minute = str(now.minute)
             response = response + ' ' + 'It is'+ str(hour) +':'  +minute  +''+meridian+'. ' 
+            
+            elif 'open google' in text:
+                webbrowser.open("www.google.com")
+            
+            elif 'open youtube' in text:
+                webbrowser.open("www.youtube.com")
+           
 
         #check if user said who is
         if('who is' in text):
